@@ -50,4 +50,4 @@ async def upload_file(request: Request, file: UploadFile = File(...)):
 
 
 # runing code
-# unicorn main:app --reload
+# uvicorn main:app --reload
