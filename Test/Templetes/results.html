@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TF-IDF Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- 🔙 Back Button -->
+    <form action="/" method="get">
+        <button type="submit">⬅ Back to Upload</button>
+    </form>
+
+    <h2>Top 50 Words by IDF</h2>
+    <table border="1">
+        <tr><th>Word</th><th>TF-IDF</th></tr>
+        {% for word, score in results %}
+        <tr><td>{{ word }}</td><td>{{ '%.6f'|format(score) }}</td></tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
